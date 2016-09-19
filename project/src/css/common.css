@@ -1,0 +1,144 @@
+.wrap{
+     width:1200px;
+     margin:0 auto;
+}
+.header,.footer,.content,.banner{
+	min-width:1200px;
+	width:100%;
+}
+.red1{
+	color:#ff0033;
+}
+
+/*-------------------------header------------------------------*/
+
+.top{
+	height:30px;
+	background-color:#f5f5f5;
+	font-size:14px;
+	border-bottom:1px solid #ddd;
+}
+.nav li{
+	margin:0 10px;
+	line-height:30px;
+	display: inline;
+}
+.nem1{
+	display:inline-block;
+	width:14px;
+	height:12px;
+	background:url(img/lv.png) no-repeat -21px top;
+	margin-left:6px;
+
+}
+.nem2{
+	display:inline-block;
+	width:6px;
+	height:3px;
+	background:url(img/icon.png) no-repeat -13px -33px;
+	margin-bottom:4px;
+	margin-left:5px;
+}
+.nem3{
+	display:inline-block;
+	width:12px;
+	height:10px;
+	background:url(img/icon.png) no-repeat -32px -28px;
+	margin-right:5px;
+}
+.nav .sxbg{
+	background:url(img/jgg.jpg) no-repeat right center;
+	margin-right:0;	
+}
+.sxbg>a{
+	margin-right:10px;
+}
+.nav a:hover{
+	color:#C80A28;
+}
+/*----------h_middle------------*/
+.h_middle{
+	height:131px;
+}
+.logo{
+	margin-top:8px;
+    margin-right:50px;
+}
+.search{
+	margin-top:28px;
+
+}
+.hot{
+	border:2px solid #c80a28;
+	height:32px;
+	width:488px;
+	margin-bottom:12px;
+}
+.hot>input{
+	height:32px;
+	color:#c80a28;
+	border:none;
+	width:402px;
+	float:left;
+	text-indent:4px;
+}
+.hot>button{
+	width:86px;
+	height:32px;
+	color:#fff;
+	font-size:14px;
+	background:#c80a28;
+	float:left;
+	border:none;
+}
+.list>a{
+	margin:0 8px;
+	color:#666;
+}
+.list>a:hover{
+	color:#ff0033;
+}
+.wechat{
+	margin-right:40px;
+	margin-top:15px;
+}
+.wechat>img{
+	display:block;
+	width:100px;
+	height:100px;
+}
+.app{
+	line-height:16px;
+	font-weight:bold;
+}
+
+/*----------h_bottom-----------*/
+.h_bottom{
+	height:34px;
+}
+.category{
+	line-height:34px;
+	width:190px;
+	background:url(img/but.jpg) no-repeat;
+	color:#fff;
+	text-align:center;
+}
+.ilist>li{
+	float:left;
+	font-weight:bold;
+	line-height:33px;
+	margin:0 16px;
+}
+.ilist>li a:hover{
+	color:#ff0033;
+}
+.ilist1{
+   margin-right:20px;
+}
+.rjt{
+	display:inline-block;
+	width:6px;
+	height:5px;
+	background:url(img/rjt.png) no-repeat;
+	margin-left:4px;
+}

@@ -1,0 +1,15 @@
+.f-cb { zoom: 1;}
+.f-cb:after { display: block; clear: both; visibility: hidden; height: 0; overflow: hidden; content: "";}
+.f-dn { display: none;}
+.f-db { display: block;}
+.f-dbb { display: block !important;}
+.f-fl { float: left;}
+.f-fr { float: right;}
+.f-oh { overflow: hidden;}
+.f-pr { position: relative;}
+.f-pa { position: absolute;}
+.f-tac { text-align: center;}
+.f-wb {font-weight:bold;}
+.padr-no{padding-right:0;}
+.fs18{font-size:18px;}
+.marb_no{margin-bottom: 0;}
