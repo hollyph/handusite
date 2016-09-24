@@ -13,3 +13,13 @@
 .padr-no{padding-right:0;}
 .fs18{font-size:18px;}
 .marb_no{margin-bottom: 0;}
+.pos_r{
+	position:relative;
+}
+.hide{
+	display: none;
+}
+.mar_none{
+	margin-right:0;
+	line-height: 22px;
+}

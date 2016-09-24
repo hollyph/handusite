@@ -8,11 +8,13 @@
 	position:absolute;
 	left:0;
 	top:0;
+	width:100%;
 }
-.bimg>li img{
-	width:1349px;
+.bimg>li a{
+	width:100%;
 	height:90px;
-    float:left;
+	display: block;
+    
 }
 .bbtn{
 	position:absolute;
@@ -29,6 +31,7 @@
 	display:inline-block;
 	line-height:30px;
 	margin-right:6px;
+	cursor:pointer;
 
 }
 .lactive{
@@ -45,6 +48,7 @@
 	overflow:hidden;
 	width:1200px;
 	height:120px;
+	background: url(../img/11.jpg) no-repeat center top;
 }
 .cimg>img{
 	width:100%;
@@ -223,6 +227,10 @@
 	height:316px;
 	width:498px;
 }
+.s_right>a,.s_right>a>img{
+	width:100%;
+	height:100%;
+}
 /* ----------------newsitem--------------- */
 .newsitem{
 	height:340px;
@@ -235,19 +243,17 @@
 	background:url(img/web_index.png) no-repeat left -52px;
 	padding-left:220px;
 }
-.newbtn>li{
-	width:78px;
-	height:22px;
-	float:left;
-	text-align:center;
-}
-.newbtn>li a{
+
+.newbtn>a{
 	display:inline-block;
 	height:22px;
 	margin:0 5px;
-	width:62px;	
+	width:62px;
+	text-align: center;	
 }
-
+.newbtn>a.active_a{
+    background:url(img/libg.png) no-repeat;
+}
 .listpic{
 	margin-top:5px;
 	height:305px;
@@ -788,12 +794,14 @@
 	width:110px;
 	margin:20px 0;
 	padding-left:85px;
+	float:left;
 }
 .guide{
 	padding-left:67px;
 }
 .com>h4{
-    background: url(img/footer01.png) -8px top;
+	background: url(img/footer01.png) no-repeat -8px top;
+    height:25px;
 }
 .com>ul li{
 	height:20px;
@@ -801,3 +809,180 @@
 .com>ul a{
 	color:#565656;
 }
+.pay>h4{
+	background: url(img/footer01.png) no-repeat -8px -34px;
+}
+.delivery>h4{
+	background: url(img/footer01.png) no-repeat left -67px;
+}
+.service>h4{
+	background: url(img/footer01.png) no-repeat -6px -100px;
+}
+.user>h4{
+	background: url(img/footer01.png) no-repeat -7px -134px;
+}
+.about>h4{
+	background: url(img/footer01.png) no-repeat -9px -202px;
+}
+.feature{
+	height:95px;
+	margin:20px 0;
+	background: url(img/feature1.png) no-repeat top center;
+	width:100%;
+}
+.f_list{
+	height:30px;
+	margin:5px 0;
+	background: #393939;
+	text-align:center;
+	color:#fff;
+	line-height:30px;
+}
+.f_list>a{
+	margin:0 15px;
+	color:#fff; 
+}
+.copyright{
+	height:85px;
+	margin:15px 0;
+}
+.version{
+	line-height:37px;
+	text-align:center;
+}
+.version>span{
+	display: inline-block;
+}
+.version>span img{
+	float:left;
+}
+.partner{
+	height:48px;
+	text-align:center;
+}
+.partner>img, .partner>a img{
+	height:38px;
+	margin-right:4px;
+}
+ .numa{
+	color: #939393;
+    display: inline-block;
+    line-height: 20px;
+    height: 20px;
+    margin:0 6px;
+}
+
+.numa>img{
+	float:left;
+	margin-right:5px;
+}
+.links>h3{
+	width:60px;
+	height:14px;
+	float:left;
+}
+.box{
+	height:30px;
+	margin-top:1px;
+	width:1140px;
+	float:left;
+}
+.website{
+	height:30px;
+}
+.website>li{
+	float:left;
+	padding:0 5px;
+	height:14px;
+}
+
+
+/* ------------------------s_search-------------- */
+.s_search{
+	height:50px;
+	position: fixed;
+	top:0;
+	background: url(img/sbg.png) repeat-x;
+	color:#fff;
+	line-height: 50px;
+	width: 100%;
+	z-index:100;
+	display: none;
+}
+.slogo{
+	margin: 5px 0 0 40px;
+	width:180px;
+	height:40px;
+}
+.sform{
+	width:750px;
+	height:28px;
+    margin-top: 9px;
+}
+.sform>input{
+	width:646px;
+	height:28px;
+	border:0;
+	float:left;
+	text-indent:5px;
+	color: #ccc;
+}
+.sform>button{
+	width:87px;
+	height:28px;
+	border:0;
+	padding:0;
+	float:left;
+	background: url(img/icon.png) no-repeat left -49px;
+}
+.search_p{
+	height:50px;
+	color:#fff;
+	line-height: 50px;
+}
+
+/* ---------------------advertisement------------------------ */
+.adv{
+	width:72px;
+	position: fixed;
+	bottom: 20%;
+    right:0;
+    z-index:1000;
+    display: none;
+}
+.com_a{
+	width:72px;
+	height:78px;
+	display: block;
+}
+.com_a1{
+	background: url(img/float.png) no-repeat left -163px;
+}
+.com_a2{
+	background: url(img/float.png) no-repeat left -241px;
+}
+.com_a3{
+	background: url(img/float.png) no-repeat left -320px;
+}
+.com_a4{
+	background: url(img/float.png) no-repeat left -399px;
+}
+.com_a5{
+	background: url(img/float.png) no-repeat left -478px;
+}
+.com_a1:hover{
+	background: url(img/float.png) no-repeat -78px -163px;
+}
+.com_a2:hover{
+	background: url(img/float.png) no-repeat -78px -241px;
+}
+.com_a3:hover{
+	background: url(img/float.png) no-repeat -78px -320px;
+}
+.com_a4:hover{
+	background: url(img/float.png) no-repeat -78px -399px;
+}
+.com_a5:hover{
+	background: url(img/float.png) no-repeat -78px -478px;
+}
+

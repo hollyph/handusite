@@ -1,56 +1,67 @@
-var lunbo = {
 
-    index: 0, // 当前显示第几张
-    len: 0,   // 轮播图片的个数
-    dom: {},  // 缓存jquery对象
-    timer: null, // 定时器
+function Broadcast(piclist,pbtn,classname){
+    this.dom = {} ;
+    this.index = 0;
+    this.timer = 0;
+    this.init(piclist,pbtn,classname);
+}
+Broadcast.prototype = {
+     constructor:Broadcast,
+     init:function(piclist,pbtn,classname){
+        var self = this;
+        this.initDom(piclist,pbtn,classname);
+        this.initStart(piclist,pbtn,classname);
 
-    init: function() {
-        this.initDom();
-        this.initSlide();
-        this.myshow();
-
-        this.tiemr = setInterval(function() {
-            lunbo.mychange();
-        }, 3000);
     },
-
-    initDom: function() {
+    initDom:function(piclist,pbtn,classname){
         var dom = this.dom;
-        dom.li = $('.pic li');
+        dom.bimg = $(piclist);
+        dom.imglist = $(piclist).children();
+        dom.bbtn = $(pbtn).children();
+
     },
-
-    initSlide: function() {
+    initStart:function(piclist,pbtn,classname){
         var dom = this.dom;
-        this.len = dom.li.size();  // 获取轮播图片的张数
+        var self = this;
+        self.timer = setInterval(function(){
+             self.index++;
+             self.showPic(piclist,pbtn,classname);
+        },3000)
+        
+        self.stop(piclist,pbtn,classname);
+        self.bbtnBind(piclist,pbtn,classname);
     },
-
-    myshow: function() {
+    //图片轮播
+    showPic:function(piclist,pbtn,classname){
         var dom = this.dom;
-
-        dom.li.eq(this.index).find('.img1').animate({'left': 0}, 1000, function() {
-
-            $(this).next().css('display', 'block');
-            $(this).next().animate({ 'left': 0}, 1000);
+        var self = this;
+        if(self.index>=dom.imglist.length){
+            self.index = 0;
+        }
+        dom.imglist.eq(self.index).stop(true,true).animate({opacity:1}).siblings().stop(true,true).animate({opacity:0});
+        dom.bbtn.eq(self.index).addClass(classname).siblings().removeClass(classname);
+    },
+    //鼠标绑定事件
+    stop:function(piclist,pbtn,classname){
+        var dom = this.dom;
+        var self = this;
+        dom.bimg.on('mouseenter',function(){
+            clearInterval(self.timer);
+        }).on('mouseleave',function(){
+            self.timer = setInterval(function(){
+                self.index++;
+                self.showPic(piclist,pbtn,classname);
+        },3000);
         })
     },
-
-    mychange: function() {
+    //按钮切换事件
+    bbtnBind:function(piclist,pbtn,classname){
         var dom = this.dom;
-        this.index++;
-
-        if (this.index == this.len) {
-            this.index = 0;
-        }
-
-        dom.li.eq(this.index).show().siblings().hide();
-        this.myshow();
-
-        dom.li.eq(this.index).siblings().find('.img1').css('left', '-760px');
-        dom.li.eq(this.index).siblings().find('.img2').css({'left': '-20px', 'display': 'none'});
+        var self = this;
+        dom.bbtn.on('mouseenter',function(){
+            clearInterval(self.timer);
+            self.index = $(this).index();
+            self.showPic(piclist,pbtn,classname);
+        })
     }
 }
-
-$(function() {
-    lunbo.init();
-})
